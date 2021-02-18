@@ -1,0 +1,23 @@
+{
+  "name": "backend-movies-project",
+  "version": "1.0.0",
+  "description": "A Backend Movies Project on Geekshubs Academy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roo-Git/Backend-Movies-Project.git"
+  },
+  "author": "Roo-Git",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roo-Git/Backend-Movies-Project/issues"
+  },
+  "homepage": "https://github.com/Roo-Git/Backend-Movies-Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
