@@ -9,6 +9,10 @@ class Film {
         this.genre = genre,
         this.adult = adult
     }
+
+    async takeMovies () {
+
+    }
 }
 
 module.exports = Film;
