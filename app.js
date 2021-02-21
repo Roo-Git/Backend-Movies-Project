@@ -10,7 +10,7 @@ const routerFilms = require('./routes/filmRouter')
 // Middleware
 app.use(express.json())
 
-app.use(routerFilms);      // FALLA ESTO //
+app.use(routerFilms);    
 
 
 // Start server // Escucha del puerto 3000 en la consola con el comando 'npm start' en la Terminal.
