@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Roo-Git/Backend-Movies-Project#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.11.17"
   }
 }
