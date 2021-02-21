@@ -9,7 +9,7 @@ const userSchema = new Schema({
     name: { 
         type: String,
         required: true,
-        deafault: 'Pepe'
+        deafault: ''
     },
     image: {
         type: String,
@@ -52,7 +52,7 @@ const userSchema = new Schema({
             "Other": 2,
         }
     },
-    paymentMethod: {
+    paymentMethod: {                                // OPTIONAL ? //
         type: Number, 
         enum: [visa, masterCard, paypal, bizum, amex, cash, bankTransfer],
         required: true
