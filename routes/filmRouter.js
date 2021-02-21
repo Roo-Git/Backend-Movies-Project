@@ -3,7 +3,7 @@ const filmController = require('../controllers/filmController')
 const filmSchema = require('../models/film')
 
 // API routes
-routerFilms.get('/films', async (req, res) => {
+routerFilms.get('/film', async (req, res) => {
     try {
         res.json(await filmController.findAllFilms())
     }catch (err) {

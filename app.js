@@ -4,13 +4,13 @@ const express = require('express');
 const app = express()
 const db = require('./db');
 const port = 3000;
-
+const routerFilms = require('./routes/filmRouter')
 
 
 // Middleware
 app.use(express.json())
 
-app.use(routerFilms);       // FALLA ESTO //
+app.use(routerFilms);      // FALLA ESTO //
 
 
 // Start server // Escucha del puerto 3000 en la consola con el comando 'npm start' en la Terminal.
