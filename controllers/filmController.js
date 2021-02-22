@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const movie = require('../models/film');
 
 

@@ -3,9 +3,6 @@ const Schema = mongoose.Schema;
 const ObjectId = mongoose.Types.ObjectId;       // Nos genera un ID para cada proceso //
 
 const filmSchema = new Schema({
-    //id: { 
-     //   type: ObjectId,
-    //},
     title: { 
         type: String,
         required: true,
