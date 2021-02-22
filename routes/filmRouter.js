@@ -47,7 +47,7 @@ routerFilms.put('/update-film:id',async (req,res) => {
     }
 });
 
-routerFilms.delete('/remove-film/:id', async (req, res) => {
+routerFilms.delete('/remove-film:id', async (req, res) => {
     try{
         const id = req.params.id;
         const status = 'deleted'
