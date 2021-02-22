@@ -20,6 +20,12 @@ class Film {
         return movie.findOne({id: id});
     };
 
+    //GET - Return a Film with Title PROBANDO
+
+    async findFilm(film) {
+        return movie.findOne(film);
+    };
+    
     //POST - Insert a new Film in the DB
 
     async addFilm(film){
@@ -28,9 +34,9 @@ class Film {
 
     //PUT - Update a Film already exists
 
-    async updateFilm(id, film){
+    async updateFilm(id, title){
         const idFound = movie.findOne({id: id})
-        return idFound.update(film)
+        return idFound.update(title)
     };
 
     //DELETE - Delete a Film with specified ID

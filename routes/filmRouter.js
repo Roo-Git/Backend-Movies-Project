@@ -3,6 +3,9 @@ const filmController = require('../controllers/filmController')
 const filmSchema = require('../models/film')
 
 // API routes
+
+// Get all Films
+
 routerFilms.get('/film', async (req, res) => {
     try {
         res.json(await filmController.findAllFilms())
@@ -14,6 +17,20 @@ routerFilms.get('/film', async (req, res) => {
     }
 });
 
+// PROBANDO
+
+routerFilms.get('/show/:film',async (req, res) => {
+    try {
+        res.json(await filmController.findFilm(film))
+    }catch (err) {
+        return res.sendStatus(500).json({
+            message: 'Internal Server Error'
+        });
+    }
+});
+
+// Get film by ID
+
 routerFilms.get('/film/:id',async (req, res) => {
     try {
         res.json(await filmController.findOne(id))
@@ -23,6 +40,8 @@ routerFilms.get('/film/:id',async (req, res) => {
         });
     }
 });
+
+// Create Film
 
 routerFilms.post('/add-film',async (req, res) => {
     try{
@@ -47,7 +66,7 @@ routerFilms.put('/update-film:id',async (req,res) => {
     }
 });
 
-routerFilms.delete('/remove-film:id', async (req, res) => {
+routerFilms.delete('/remove-film/:id', async (req, res) => {
     try{
         const id = req.params.id;
         const status = 'deleted'
