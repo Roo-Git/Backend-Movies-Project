@@ -3,14 +3,15 @@ const Schema = mongoose.Schema;
 const ObjectId = mongoose.Types.ObjectId;       // Nos genera un ID para cada proceso //
 
 const filmSchema = new Schema({
-    id: { 
-        type: ObjectId,
-    },
+    //id: { 
+     //   type: ObjectId,
+    //},
     title: { 
         type: String,
         required: true,
-        deafault: 'film'
+        default: 'film'
     },
+    /*
     creationDate: {
         type: Date,
         default: new Date
@@ -54,7 +55,7 @@ const filmSchema = new Schema({
     adult: { 
         type: Boolean,
         default: false
-    }
+    }*/
 })
 
 const film = mongoose.model('film', filmSchema);

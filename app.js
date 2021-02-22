@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 const app = express()
 const db = require('./db');
@@ -9,7 +7,6 @@ const routerFilms = require('./routes/filmRouter')
 
 // Middleware
 app.use(express.json())
-
 app.use(routerFilms);    
 
 
