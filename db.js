@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-
+// MONGO DB COMPASS -> mongodb://localhost:27017/videostore //
 const MONGO_HOST = process.env.MONGO_HOST || 'localhost';
 const MONGO_PORT = process.env.MONGO_PORT || '27017';
 const MONGO_DBNAME = process.env.MONGO_DBNAME || 'videostore';
+//////////////////////////////////////////////////////////
 const MONGO_USER = process.env.MONGO_USER || null;
 const MONGO_PASSWORD = process.env.MONGO_PASSWORD || null;
 

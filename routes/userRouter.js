@@ -1,4 +1,4 @@
-const userRouter = require('express').Router();
+const routerUser = require('express').Router();
 const userController = require('../controllers/userController');
 const userSchema = require('../models/user')
 
@@ -8,7 +8,7 @@ const userSchema = require('../models/user')
 
 // Obtener Users
 
-userRouter.get('/user', async (req, res) => {
+routerUser.get('/user', async (req, res) => {
     try {
         res.json(await userController.findAllUsers())
     }catch (err) {
@@ -18,8 +18,9 @@ userRouter.get('/user', async (req, res) => {
     }
 });
 
+// Crear User
 
-userRouter.post('/add-user',async (req, res) => {
+routerUser.post('/add-user',async (req, res) => {
     try{
         const id = await userController.addUser(new userSchema(req.body));
         const status = 'success';
@@ -28,7 +29,20 @@ userRouter.post('/add-user',async (req, res) => {
         return res.sendStatus(500).json({
             message: 'Internal Server Error'
         });
-    }
-})
+    };
+});
 
-module.exports = userRouter;
+
+// CREAD ID
+
+routerUser.get('/user/:id',async (req, res) => {
+    try {
+        res.json(await userController.findOne(id))
+    }catch (err) {
+        return res.sendStatus(500).json({
+            message: 'Internal Server Error'
+        });
+    }
+});
+
+module.exports = routerUser;
