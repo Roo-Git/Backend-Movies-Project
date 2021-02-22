@@ -14,9 +14,9 @@ routerFilms.get('/film', async (req, res) => {
     }
 });
 
-routerFilms.get('/film:id',async (req, res) => {
+routerFilms.get('/film/:id',async (req, res) => {
     try {
-        res.json(await filmController.findOne(req))
+        res.json(await filmController.findOne(id))
     }catch (err) {
         return res.sendStatus(500).json({
             message: 'Internal Server Error'
