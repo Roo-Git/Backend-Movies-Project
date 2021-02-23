@@ -45,4 +45,20 @@ routerUser.get('/user/:id',async (req, res) => {
     }
 });
 
+// ELIMNAR USER por ID PROBANDO
+
+routerUser.delete('/user/remove/:id', async (req, res) => {
+    try{
+        const id = req.params.id;
+        const status = 'deleted'
+        await filmController.deleteUser(id);
+        res.json({status,id});
+    } catch( error ) {
+        return res.sendStatus(500).json({
+            message: 'Internal Server Error'
+     });   
+    }
+ 
+ });
+
 module.exports = routerUser;

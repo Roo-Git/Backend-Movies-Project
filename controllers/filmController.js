@@ -1,6 +1,7 @@
 const movie = require('../models/film');
 
 
+
 class Film {
 
     constructor(){
@@ -19,11 +20,14 @@ class Film {
         return movie.findOne({id: id});
     };
 
-    //GET - Return a Film with Title PROBANDO
+    //GET - Return a Film with Title 
 
-    async findFilm(film) {
-        return movie.findOne(film);
-    };
+    async findByTitle({query}) {
+        if (query == undefined)
+        return [];
+        else
+        return movie.find({"title": query});
+    };  
     
     //POST - Insert a new Film in the DB
 

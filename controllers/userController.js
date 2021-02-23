@@ -25,6 +25,13 @@ class User {
     async findById({id: id}){
         return user.findOne({id: id})
     };
+
+    // DELETE Borrar por ID 
+
+    async deleteUser({id: id}) {
+        const idFound = user.findOne({id: id})
+        return idFound.remove()
+    };
 };
 
 let userController = new User();

@@ -19,9 +19,10 @@ routerFilms.get('/film', async (req, res) => {
 
 // PROBANDO
 
-routerFilms.get('/show/:film',async (req, res) => {
+routerFilms.get('/film/search',async (req, res) => {
     try {
-        res.json(await filmController.findFilm(film))
+        const title = await filmController.findByTitle(req.query);
+        res.json(title);
     }catch (err) {
         return res.sendStatus(500).json({
             message: 'Internal Server Error'
