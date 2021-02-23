@@ -22,15 +22,14 @@ class User {
     
     // GET Buscar por ID
 
-    async findById({id: id}){
-        return user.findOne({id: id})
+    async findById(id){
+        return user.findById(id)
     };
 
-    // DELETE Borrar por ID 
+    // DELETE Borrar por ID   PROBANDO
 
-    async deleteUser({id: id}) {
-        const idFound = user.findOne({id: id})
-        return idFound.remove()
+    async deleteUser(id) {
+        return user.findByIdAndDelete(id)
     };
 };
 
