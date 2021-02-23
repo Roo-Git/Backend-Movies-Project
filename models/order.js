@@ -5,11 +5,13 @@ const ObjectId = mongoose.Types.ObjectId;
 const orderSchema = new Schema({
         ownerId: {
             type: ObjectId,
+            reference: "User",
             required: true
         },
 
         filmId: {
             type: ObjectId,
+            reference: "Film",
             required: true
         },
         dateInis: Date,
