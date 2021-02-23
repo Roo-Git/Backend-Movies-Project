@@ -15,3 +15,5 @@ data-postman-var-1="144ce81a237f1ca5e7ea"></div>
     ));
   }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
 </script>
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/144ce81a237f1ca5e7ea)
