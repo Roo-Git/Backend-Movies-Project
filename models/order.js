@@ -9,6 +9,13 @@ const orderSchema = new Schema(
             required: true
         },
 
+        filmId: {
+            type: ObjectId,
+            required: true
+        },
+        dateInis: Date,
+        dateEnd: Date
+
     });
 const order = mongoose.model('order', orderSchema);
 module.exports = order;
