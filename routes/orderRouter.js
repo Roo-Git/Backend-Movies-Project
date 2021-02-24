@@ -1,18 +1,33 @@
-const routerOrder = require('express').Router();
+const routerOrders = require('express').Router();
 const orderController = require('../controllers/orderController');
 const orderSchema = require('../models/order')
 
 
-// Obtener pedido por ID PROBANDO
+// 
 
-routerOrder.get('/order/:id', async (req, res) => {
+routerOrders.post('/order', async (req,res) => {
     try {
-        res.json(await orderController.findById(id))
-    }catch (err) {
+        const id = await orderController.create(new OrderModel(req.body));
+        res.json(id);
+    }catch(error) {
         return res.status(500).json({
-            message: 'Internal Server Error'
+            message: 'Server Error: ' + error
         });
-    };
+    }
 });
 
-module.exports = routerOrder;
+routerOrders.get('/order/:id', async (req, res) => {
+    try{
+        const order = await orderController.get(req.params.id);
+        if(!order){
+            res.sendStatus(404);
+        }else{
+            res.json(order);
+        }
+    }catch (error) {
+        return res.status(500).json({
+            message: 'Server Error: ' + error
+        });
+    }
+});
+module.exports = routerOrders;
