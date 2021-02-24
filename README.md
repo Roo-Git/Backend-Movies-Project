@@ -5,8 +5,11 @@
 
 ## START:
 
-  - 1: docker run --rm -p 27017:27017 mongo
+  1: Instala Docker.
+  - En la Terminal ejecuta:  docker run --rm -p 27017:27017 mongo
   #
+
+  2: npm init
   - 2: docker-compose.yml
   #
   - 3: docker-compose up

@@ -13,10 +13,10 @@ class Rental {
     };
 
 
-    //GET - Return all Rentals in the DB
+    //GET - Return all Rentals in the DB AQUIIIIII
 
-    async findAllOrders(){
-        return Order.find();
+    async findAllOrders(getAllOrders){
+        return order.find(getAllOrders);
     };
 
 
